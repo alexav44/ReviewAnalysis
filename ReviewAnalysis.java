@@ -17,6 +17,9 @@ public class ReviewAnalysis{
     return sum/allReviews.length;
     
     }
+
+    ArrayList <String> comments = new ArrayList<String>();
+
     public ArrayList<String> collectComments(){
         for(int i =0; i<allReviews.length; i++){
             String s = i +"-"+ allReviews[i].getComment();
@@ -24,8 +27,8 @@ public class ReviewAnalysis{
             if(!(last.equals(".")|| last.equals("!"))){
                 s+=".";
             }
-            if(s.indexOf("!")>0) comment.add(s);   
+            if(s.indexOf("!")>0) comments.add(s);   
         }
-          return comment;
+          return comments;
          } 
 }
